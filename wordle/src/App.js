@@ -1,34 +1,25 @@
 import logo from './logo.svg';
 import Keyboard from './Keyboard'
 import Board from './Board'
-
+import React, {useState} from 'react'
 
 function App() {
-<<<<<<< Updated upstream
-=======
-
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const alphaArr = alphabet
     .split('')
     .map(l => ({
       letter: l,
-      color:"lightgrey"
+      color: "lightgrey"
     }))
   const [letters, setLetters] = useState(alphaArr)
-  const [newLetter, setNewLetter] = useState('') 
->>>>>>> Stashed changes
+  const [newLetter, setNewLetter] = useState('')
   return (
     <div className="App">
       <header>
-       <h1>Wordle</h1>
+        <h1>Wordle</h1>
       </header>
-<<<<<<< Updated upstream
-      <Board/>
-      <Keyboard/>
-=======
-      <Board letters = {letters} setLetters={setLetters} newLetter = {newLetter}/>
-      <Keyboard letters = {letters} setNewLetter ={setNewLetter}/>
->>>>>>> Stashed changes
+      <Board letters={letters} setLetters={setLetters} newLetter={newLetter} />
+      <Keyboard letters={letters} setNewLetter={setNewLetter} />
     </div>
   );
 }
