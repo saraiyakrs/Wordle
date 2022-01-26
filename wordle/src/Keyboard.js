@@ -1,13 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Key from './Key'
+//rafce
+const Keyboard = ({letters, setNewLetter, setNewGuess, guess}) => {
+  
+  return <div>
+      {letters.map(l => 
+        <Key
+            letter={l.letter}
+            color={l.color}
+            setNewLetter={setNewLetter}
+            setNewGuess = {setNewGuess}
+            guess = {guess}
+        />
+      )}
+  </div>;
+};
 
-const Keyboard = () => {
-    return (
-        <div>
-            <Key letter = "A" color ="grey" />
-            <Key letter = "B" color = "green" />
-        </div>
-    )
-}
-
-export default Keyboard
+export default Keyboard;
