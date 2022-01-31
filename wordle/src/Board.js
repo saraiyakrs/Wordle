@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
 function Cell({ letter, color }) {
-    return <td style={{ backgroundColor: color }}>
+    return <td style={{ backgroundColor: color }}
+    className = "Cell"
+    >
         {letter}
     </td>
 }
 
 function Row({ guess, letters }) {
-    return <tr>
+
+    return <tr className = "Row">
         {guess.split('')
             .map(l =>
                 <Cell
@@ -50,8 +53,8 @@ function NewRow({ newGuess }) {
 }
 
 const Board = ({ letters, setLetters, newLetter, newGuess, setNewGuess }) => {
-    const [answer, setAnswer] = useState("REACT")
-    const [guesses, setGuesses] = useState(["ROBOT"])
+    const [answer, setAnswer] = useState("WEIRD")
+    const [guesses, setGuesses] = useState([])
     const handleEnter = () => {
         if (newGuess.length == 5) {
             processGuess(newGuess)

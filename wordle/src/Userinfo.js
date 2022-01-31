@@ -6,7 +6,7 @@ const Userinfo = ({ username, bestScore, gamesBeaten, gamesPlayed }) => {
         setnewUsername(newUsername)
     }
     return (
-        <div>
+        <div className = "Userinfo">
             <h1>User Login</h1>
             <form>
                 <label for = "username"> Username </label>
@@ -24,5 +24,6 @@ const Userinfo = ({ username, bestScore, gamesBeaten, gamesPlayed }) => {
         
     )
 }
-
 export default Userinfo
+ 
+

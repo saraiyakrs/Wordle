@@ -10,7 +10,9 @@ const Key = ({letter, color, setNewLetter,guess, setNewGuess}) => {
   }
   return <div 
     onClick={onKeyPress}
-    style={{backgroundColor: color}}>
+    style={{backgroundColor: color}}
+    className = "Key"
+    >
       {letter}
   </div>;
 };

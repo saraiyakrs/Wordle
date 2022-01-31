@@ -1,7 +1,9 @@
 import Keyboard from './Keyboard'
+import style from './App.css'
 import Board from './Board'
 import React, {useState} from 'react'
 import Userinfo from './Userinfo'
+
 
 function App() {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -22,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Wordle</h1>
+        <h1>WOODLE</h1>
       </header>
       <Userinfo username={username} bestScore={bestScore} gamesBeaten={gamesBeaten} gamesPlayed={gamesPlayed}  />
       <Board letters={letters} setLetters={setLetters} newLetter={newLetter} newGuess = {newGuess} setNewGuess = {setNewGuess}/>
